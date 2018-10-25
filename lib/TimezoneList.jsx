@@ -13,7 +13,7 @@ const List = styled.ul`
   overflow-y: auto;
   margin: 0;
   padding: 0;
-  border: 1px solid #e6ebec;
+  border: 1px solid #EBEEEE;
   margin-top: -1px;
   border-radius: 0 0 3px 3px;
   overflow-y: auto;
@@ -22,28 +22,43 @@ const List = styled.ul`
   ${({ show }) => !show && css`
     display: none;
   `}
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #D6D6D6;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #484747;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #484747; 
+  }
 `;
 
 const ListItem = styled.li`
-  padding: 0px 12px;
   display: flex;
   align-items: center;
   justify-content: left;
+  padding: 0px 12px;
   height: 40px;
   cursor: pointer;
-  color: #444;
-  border-top: 1px solid black;
+  color: #353636;
+  border-top: 1px solid #EBEEEE;
 
   :first-child {
     border-top: none;
   }
 
-  ${({ focus }) => focus && css`
-    background: #f0f0f0;
-  `}
-
   :hover {
-    background: black;
+    background: #EBEEEE;
   }
 `;
 

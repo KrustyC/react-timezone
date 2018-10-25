@@ -8,8 +8,12 @@ import TimezoneList from './TimezoneList';
 
 const Wrapper = styled.div`
   display: inline-block;
-  font: 13px sans-serif;
   position: relative;
+
+  * {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13px;
+  }
 `;
 
 export default class TimezonePicker extends Component {
@@ -81,7 +85,7 @@ export default class TimezonePicker extends Component {
     const value = (currentZone && !showList)
       ? stringifyZone(currentZone, offset, !displayOffset)
       : query;
-    console.log(value)
+
     return (
       <Wrapper className={className} style={style} ref={this.timezoneRef}>
         <TimezoneInput
