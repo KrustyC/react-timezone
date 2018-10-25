@@ -1,15 +1,17 @@
-# react-timezone
+# @krustyc/react-timezone
 
 > Timezone Picker for React
 
 ## Demo
 
-[Available here.](http://vahnag.github.io/react-timezone/demo/)
+[Available here.](http://krustyc.github.io/react-timezone/demo/)
 
 ## Installation
 
 ```bash
-$ npm install react-timezone
+$ npm install @krustyc/react-timezone
+or
+$ yarn add @krustyc/react-timezone
 ```
 
 ## Usage
