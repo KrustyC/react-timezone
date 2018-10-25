@@ -82,7 +82,7 @@ export default class TimezonePicker extends Component {
       currentZone, query, showList, timezones
     } = this.state;
 
-    const value = (currentZone && !showList)
+    const value = ((currentZone && !showList))
       ? stringifyZone(currentZone, offset, !displayOffset)
       : query;
 

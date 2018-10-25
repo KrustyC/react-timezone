@@ -16,6 +16,7 @@ const List = styled.ul`
   border: 1px solid #EBEEEE;
   margin-top: -1px;
   border-radius: 0 0 3px 3px;
+  background: #FFFFFF;
   overflow-y: auto;
   overflow-x: hidden;
 
