@@ -5,11 +5,11 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'examples/src/index.html'),
   filename: './index.html'
-})
+});
 
 const scriptExtHtmlWebpackPlugin = new ScriptExtHtmlWebpackPlugin({
   defaultAttribute: 'defer'
-})
+});
 
 module.exports = {
   entry: path.join(__dirname, 'examples/src/index.jsx'),
@@ -24,7 +24,7 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/
       },
-      { test: /\.css$/, use: 'css-loader/locals'},
+      { test: /\.css$/, use: 'css-loader/locals' },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -52,4 +52,4 @@ module.exports = {
     colors: true
   },
   devtool: 'source-map'
-}
+};
