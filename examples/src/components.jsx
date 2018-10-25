@@ -9,10 +9,8 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 15%;
-  padding-right: 15%;
 `;
 
 export const Subcontainer = styled.div`
@@ -30,26 +28,30 @@ export const Section = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 40px;
+  font-size: 26px;
 `;
 
-export const Subtitle = styled.h3`
-  font-size: 24px;
-`;
-
-export const Heading = styled.h5`
-  font-size: 18px;
-  font-weight: bold;
+export const Subtitle = styled.h5`
+  font-size: 16px;
 `;
 
 export const P = styled.p`
-  font-size: 16px;
+  font-size: 14px;
+  text-align: center;
+`;
+
+export const A = styled.a`
+  text-decoration: none;
+  color: #04A6D6;
+  :hover {
+    color: #0686AD;
+  }
 `;
 
 export const Spacer = styled.hr`
   margin: 30px;
   background-color: #DDDBDB;
   border: 0px;
-  width: 100%;
+  width: 50%;
   height: 3px;
 `;

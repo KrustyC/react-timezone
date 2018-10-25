@@ -2,27 +2,17 @@
 import 'typeface-roboto';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle } from 'styled-components';
 
-import { Container, Section, Subtitle } from './components';
+import {
+  A,
+  Container,
+  P,
+  Spacer,
+  Subtitle,
+  Title,
+} from './components';
 import TimePicker from '../../lib';
 
-
-// eslint-disable-next-line
-createGlobalStyle`
- body {
-   padding: 0;
-   margin: 0;
-   font-family: Roboto !important;
- }
- * {
-   font-family: Roboto !important;
- }
- h1, h2, h3, h4, h5, h6, p, span {
-  color: #545252;
-  margin: 10px;
- }
-`;
 
 class App extends Component {
   state = {
@@ -34,21 +24,36 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <div>
-          <Section>
-            <Subtitle>
-              Default checkbox without labels
-            </Subtitle>
-            <TimePicker
-              value={this.state.timezone}
-              onChange={this.onChangeTimezone}
-              inputProps={{
-                placeholder: 'Select Timezone...',
-                name: 'timezone'
-              }}
-            />
-          </Section>
-        </div>
+        <Title>
+          @krustyc/react-timezone
+        </Title>
+        <Subtitle>
+          Timezone Picker for React built with
+          {' '}
+          <A href="https://www.styled-components.com/" target="_blank">styled-components</A>
+        </Subtitle>
+        <P>
+          Please note, this is a fork of
+          {' '}
+          <A href="https://github.com/vahnag/react-timezone" target="_blank">
+            @vahnag version
+          </A>
+          .
+          <br />
+          I've re-written it using Babel 7, and styled-components, and adding the possibility to
+          pass an array of custom timezones.
+        </P>
+        <Spacer />
+        <TimePicker
+          value={this.state.timezone}
+          onChange={this.onChangeTimezone}
+          inputProps={{
+            placeholder: 'Select Timezone...',
+            name: 'timezone'
+          }}
+        />
+
+
       </Container>
     );
   }
