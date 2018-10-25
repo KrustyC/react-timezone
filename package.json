@@ -1,47 +1,57 @@
 {
-  "name": "react-timezone",
-  "version": "2.1.0",
+  "name": "@krustyc/react-timezone",
+  "version": "3.0.0",
   "description": "React timezone picker",
-  "main": "build/react-timezone.min.js",
+  "main": "dist/react-timezone.min.js",
   "scripts": {
-    "build": "webpack",
-    "lint": "eslint webpack.config.js src",
-    "pre-publish": "npm run lint && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "transpile": "babel lib -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build && npm run deploy",
+    "lint": "eslint './lib/**/*.js*' && eslint './examples/src/*.js*'",
+    "lint:css": "stylelint './lib/**/*.jsx' && stylelint './examples/src/**/*.jsx'"
   },
-  "files": [
-    "./build/react-timezone.min.js"
-  ],
-  "author": "Vahagn Aharonian <vahagn.aharonian@gmail.com>",
+  "author": "Davide Crestini <davide.crestini94@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.17.0",
-    "babel-eslint": "^8.2.3",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-3": "^6.24.1",
-    "eslint": "^4.12.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.5.1",
-    "react": "^16.4.1",
-    "styled-jsx": "^2.2.6",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.7"
-  },
-  "peerDependencies": {
-    "react": "^16.0.0"
-  },
   "dependencies": {
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^1.1.11",
+    "gh-pages": "^1.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "script-ext-html-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.22.1",
+    "typeface-roboto": "^0.0.54",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vahnag/react-timezone.git"
+    "url": "git@github.com:KrustyC/react-timezone.git"
   },
   "keywords": [
     "react",
@@ -53,7 +63,7 @@
     "field"
   ],
   "bugs": {
-    "url": "https://github.com/vahnag/react-timezone/issues"
+    "url": "https://github.com/KrustyC/react-timezone/issues"
   },
-  "homepage": "https://github.com/vahnag/react-timezone#readme"
+  "homepage": "https://github.com/KrustyC/react-timezone#readme"
 }
